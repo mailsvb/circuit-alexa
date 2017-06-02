@@ -2,16 +2,22 @@
 Alexa skill for Circuit integration
 ## Setup skill
 
-1. Download skill.zip and edit index.js (Circuit server address and cookie information)
+1. Get a valid Cookie via Chrome and "EditThisCookie" extension
+2. Download skill.zip and edit index.js (Circuit server address and cookie information)
 3. Deploy skill.zip to AWS Lambda
 4. Configure Alexa skill
 
-### Step 1: Edit zip file
+### Step 1: Get a valid cookie
+1. Open Chrome and install "EditThisCookie" via the Chrome web store: https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg
+2. Do a fresh login into your Circuit Account (Tick: "This is a private Computer")
+3. Open "EditThisCookie" and copy the cookie information ![Get your Cookie](/pics/cookie.jpg?raw=true "Get your Cookie")
+
+### Step 2: Edit zip file
 1. After downloading skill.zip from this repository, extract the content of it
 2. Edit index.js with a simple text editor. A line that starts with **let con = new Circuit** needst to be edited. The line can be found within the first few lines of the file.
 3. name the server address (e.g. eu.yourcircuit.com) and add your session cookie information
 
-### Step 2: AWS Lambda
+### Step 3: AWS Lambda
 1. Go to http://aws.amazon.com/lambda/ . You will need to set-up an AWS account (the basic one will do fine) if you don't have one already ** Make sure you use the same Amazon account that your Echo device is registered to** Note - you will need a credit or debit card to set up an AWS account - there is no way around this. If you are just using this skill then you are highly unlikely to be charged unless you are making at least a million requests a month!
 2. Go to the AWS Console and click on the Lambda link. Go to the drop down "Location" menu and ensure you select US-East(N. Virginia) if you are based in the US or EU(Ireland) if you are based in the UK or Germany. This is important as only these two regions support Alexa. NOTE: the choice of either US or EU is important as it will affect the results that you get. The EU node will provide answers in metric and will be much more UK focused, whilst the US node will be imperial and more US focused.
 3. Click on the Create a Lambda Function or Get Started Now button.
@@ -26,7 +32,7 @@ Alexa skill for Circuit integration
 13. Click "Next" and review the settings then click "Create Function". This will upload the skill.zip file to Lambda.
 14. Copy the ARN from the top right to be used later in the Alexa Skill Setup (it's the text after ARN - it won't be in bold and will look a bit like this arn:aws:lambda:eu-west-1:XXXXXXX:function:circuit).
 
-### Step 3: Alexa skill
+### Step 4: Alexa skill
 1. Go to the Alexa Console (https://developer.amazon.com/edw/home.html and select Alexa on the top menu)
 2. Click "Get Started" under Alexa Skills Kit
 3. Click the "Add a New Skill" yellow box.
