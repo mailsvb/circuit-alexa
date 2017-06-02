@@ -11,6 +11,7 @@ Alexa skill for Circuit integration
 1. Open Chrome and install "EditThisCookie" via the Chrome web store: https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg
 2. Do a fresh login into your Circuit Account (Tick: "This is a private Computer")
 3. Open "EditThisCookie" and copy the cookie information ![Get your Cookie](/pics/cookie.jpg?raw=true "Get your Cookie")
+4. Do not log out of Circuit. Once the cookie is used via Alexa, you will be asked to log in again
 
 ### Step 2: Edit zip file
 1. After downloading skill.zip from this repository, extract the content of it
